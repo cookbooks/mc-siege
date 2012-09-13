@@ -8,7 +8,7 @@ execute "compile siege" do
 cd /tmp;
 tar zxvf siege-2.72.tar.gz;
 cd siege-2.72;
-./configure --prefix=/opt/local;
+./configure --prefix=#{node['siege']['prefix']};
 make && make install;
   EOS
 
